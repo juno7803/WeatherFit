@@ -1,15 +1,22 @@
 import React,{useState} from 'react';
+import './Weather.css';
 
 type WeatherInfoProps={
     weather: string;
     temp: number;
+    cloth: string;
+    imgs: string|undefined;
 };
 
-function Weather({weather,temp}: WeatherInfoProps){
+function Weather({weather,temp,cloth,imgs}: WeatherInfoProps){
     return (
         <div>
-            <h1 className ="TempInfo">{temp}도 </h1>
-            <div className="WeatherInfo">현재 날씨 {weather}</div>
+            <h1 className ="TempInfo">{temp}℃ </h1>
+            <div className="WeatherInfo">
+                현재 날씨 {weather}
+                <img className="WeatherImgs"src={imgs} />
+            </div>
+            <span className="Cloth">추천하는 옷 {cloth}</span>
         </div>
     );
 }
