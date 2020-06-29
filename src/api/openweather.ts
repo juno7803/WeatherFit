@@ -1,9 +1,9 @@
-// 위치정보 받아와서 현재위치 기준으로 하는건 나중에 추가 구현
 import axios from "axios";
 const API_KEY = "734bf25472a20c2e1d438fa3ad1db566";
 let lat = 0;
 let lon = 0; 
 
+// 위치 정보 받아오는 함수
 async function getLocation (){
     if (navigator.geolocation) { // GPS를 지원하면
       navigator.geolocation.getCurrentPosition(function(position) {
@@ -23,7 +23,6 @@ async function getLocation (){
     }
   }
   
-  //`https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=${API_KEY}&units=metric`
 export async function getWeathers(){
     await getLocation();
     const res = await axios.get(
