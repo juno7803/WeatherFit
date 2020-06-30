@@ -1,0 +1,26 @@
+@font-face { font-family: 'RIDIBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+.Container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'RIDIBatang';
+    color: rgba(255, 255, 255, 0.945);
+    text-align: center;
+    margin-top: 50px;
+};
+
+.TempInfo{
+    text-align: center;
+}
+
+.WeatherInfo{
+}
+
+.WeatherImgs{
+}
+
+.Cloth{
+}

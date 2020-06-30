@@ -1,28 +1,30 @@
-import React,{useState} from 'react';
-import './Weather.css';
+import React, { useState } from "react";
+import Container from '@material-ui/core/Container';
+import "./Weather.css";
 
-type WeatherInfoProps={
-    weather: string;
-    temp: number;
-    cloth: string;
-    imgs: string|undefined;
+type WeatherInfoProps = {
+  weather: string;
+  temp: number;
+  cloth: string;
+  imgs: string | undefined;
+  msg: string | undefined;
 };
 
-function Weather({weather,temp,cloth,imgs}: WeatherInfoProps){
-    return (
-        <div>
-            <h1 className ="TempInfo">{temp}℃ </h1>
-            <div className="WeatherInfo">
-                현재 날씨 {weather}
-                <img className="WeatherImgs"src={imgs} />
-            </div>
-            <span className="Cloth">추천하는 옷 {cloth}</span>
-        </div>
-    );
+function Weather({ weather, temp, cloth, imgs, msg }: WeatherInfoProps) {
+  return (
+    <div className="Background">
+      <Container className="Container" maxWidth="sm">
+        <h1>서울 특별시</h1>
+        <h2 className="TempInfo">{Math.ceil(temp)}℃ </h2>
+          <div className="WeatherInfo">{msg}</div>
+          <img className="WeatherImgs" src={imgs}/>
+        <div className="Cloth">추천하는 옷 {cloth}</div>
+      </Container>
+    </div>
+  );
 }
 
 export default Weather;
-
 
 // 28도 이상 : 민소매,반팔,반바지
 // 27~23도 : 반팔,얇은 셔츠,반바지, 면바지
