@@ -12,9 +12,20 @@ type WeatherInfoProps = {
   bottom: string;
   imgs: string | undefined;
   msg: string | undefined;
+  //daliy: string[];
 };
 
-function Weather({ weather, temp, cloth, bottom, imgs, msg }: WeatherInfoProps) {
+function Weather({ temp, cloth, bottom, imgs, msg}: WeatherInfoProps) {
+  const [state, setState] = React.useState({
+    checkedA: true,
+    checkedB: true,
+  });
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+    // 여기서 함수를 호출해서 toggle
+  };
+  
   return (
     <div className="Background">
       <Container className="Container" maxWidth="sm">
@@ -31,7 +42,7 @@ function Weather({ weather, temp, cloth, bottom, imgs, msg }: WeatherInfoProps) 
           이런 옷을 추천 드려요
         </div>
         <div className="Footer">
-          <Switch></Switch>
+          <Switch color='primary'></Switch>
         </div>
       </Container>
     </div>

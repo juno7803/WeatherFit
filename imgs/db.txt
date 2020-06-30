@@ -1,4 +1,0 @@
-https://openweathermap.org/weather-conditions
-
-시간되면 링크에서 설명까지 추가하기.
--> ex) 얕은 구름

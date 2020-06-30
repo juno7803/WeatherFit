@@ -32,7 +32,7 @@ const weather = createReducer<WeatherState,WeatherAction>(initialState,{
         weatherInfo:{
             loading: false,
             error: action.payload,
-            data:null
+            data: null
         }
     })
 });
