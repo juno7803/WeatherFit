@@ -8,7 +8,6 @@ const API_KEY = "734bf25472a20c2e1d438fa3ad1db566";
 //         navigator.geolocation.getCurrentPosition(function(position) {
 //         lat=position.coords.latitude;
 //         lon=position.coords.longitude;
-//         getWeathers(lat,lon);
 //       }, function(error) {
 //         console.error(error);
 //       }, {
@@ -25,7 +24,6 @@ export async function getWeathers(){
  //   await getLocation();
     const res = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=${API_KEY}&units=metric`
-        //`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`    
     );
     console.log(res);
     return {

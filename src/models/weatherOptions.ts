@@ -3,50 +3,74 @@
     Rain: {
       title: "Raining",
        msg: "우산 챙기세요!",
-      icon:
-        "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/rain.PNG",
+      icon:{
+        day: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/day/09d.png",
+        night: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/day/02d.png"
+      },
+      background:""
     },
     Clear: {
       title: "Sunny",
-       msg: "날이 좋아요",
-      icon:
-        "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/clear.PNG",
+       msg: "날이 좋아요!",
+      icon:{
+        day: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/day/02d.png",
+        night: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/night/01n.png"
+      },
+      background:""
     },
     Thunderstorm: {
       title: "Thunderstrom",
        msg: "천둥이 쳐요!",
-      icon:
-        "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/thunderstrom.PNG",
+      icon:{
+        day: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/day/11d.png",
+        night: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/night/01n.png"
+      },
+      background:""
     },
     Clouds: {
       title: "Clouds",
-       msg: "구름이 꼈어요",
-      icon:
-        "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/clouds.PNG",
+       msg: "구름이 꼈어요!",
+      icon:{
+        day: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/day/03d.png",
+        night: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/night/01n.png"
+      },
+      background:""
     },
     Snow: {
       title: "Snow",
        msg: "눈이와요!",
-      icon:
-        "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/snow.PNG",
+      icon:{
+        day: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/day/13d.png",
+        night: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/night/01n.png"
+      },
+      background:""
     },
     Drizzle: {
       title: "Drizzle",
-       msg: "이슬비가 내려요",
-      icon:
-        "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/drizzle.PNG",
+       msg: "이슬비가 내려요!",
+      icon:{
+        day: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/day/10d.png",
+        night: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/night/01n.png"
+      },
+      background:""
     },
     Haze: {
       title: "Haze",
-       msg: "안개가 꼈어요",
-      icon:
-        "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/haze.PNG",
+       msg: "안개가 꼈어요!",
+      icon:{
+        day: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/day/50d.png",
+        night: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/night/01n.png"
+      },
+      background:""
     },
     Mist: {
       title: "Mist",
-       msg: "안개가 꼈어요",
-      icon:
-        "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/mist.PNG",
+       msg: "안개가 꼈어요!",
+      icon:{
+        day: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/day/50d.png",
+        night: "https://weather-fit.s3.ap-northeast-2.amazonaws.com/weather/night/01n.png"
+      },
+      background:""
     },
   };
 

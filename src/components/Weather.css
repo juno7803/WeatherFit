@@ -7,20 +7,41 @@
     align-items: center;
     
     font-family: 'RIDIBatang';
-    color: rgba(255, 255, 255, 0.945);
+    background-color: rgba(255, 255, 255, 0.945);;
     text-align: center;
-    margin-top: 50px;
+
+    box-shadow: gray;
+    border-radius: 30px;
+    margin-top : 50px;
+    margin: 0 auto;
+
+    height: 670px;
 };
 
+h1{
+    margin-bottom: 0;
+}
+
 .TempInfo{
-    text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.WeatherInfo{
-}
-
-.WeatherImgs{
+.ClothContainer{
+    margin-top: 150px;
+    font-size: 20px;
 }
 
 .Cloth{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.Footer{
+    margin-top: 10px;
 }

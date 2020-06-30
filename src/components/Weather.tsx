@@ -1,24 +1,38 @@
 import React, { useState } from "react";
-import Container from '@material-ui/core/Container';
+import Container from "@material-ui/core/Container";
+import Switch from "@material-ui/core/Switch";
+import BottomNavigation from "@material-ui/core/BottomNavigation";
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import "./Weather.css";
 
 type WeatherInfoProps = {
   weather: string;
   temp: number;
   cloth: string;
+  bottom: string;
   imgs: string | undefined;
   msg: string | undefined;
 };
 
-function Weather({ weather, temp, cloth, imgs, msg }: WeatherInfoProps) {
+function Weather({ weather, temp, cloth, bottom, imgs, msg }: WeatherInfoProps) {
   return (
     <div className="Background">
       <Container className="Container" maxWidth="sm">
         <h1>서울 특별시</h1>
         <h2 className="TempInfo">{Math.ceil(temp)}℃ </h2>
-          <div className="WeatherInfo">{msg}</div>
-          <img className="WeatherImgs" src={imgs}/>
-        <div className="Cloth">추천하는 옷 {cloth}</div>
+        <div className="WeatherMsg">{msg}</div>
+        <img className="WeatherImgs" src={imgs}/>
+        <div> 시간대별 날씨 현황 </div>
+        <div className="ClothContainer">
+          <div className="Cloth">
+            <img src={cloth} />
+            <img src={bottom} />
+          </div>
+          이런 옷을 추천 드려요
+        </div>
+        <div className="Footer">
+          <Switch></Switch>
+        </div>
       </Container>
     </div>
   );
