@@ -15,7 +15,7 @@ type WeatherInfoProps = {
 };
 
 function Weather({ temp, cloth, bottom, imgs, msg, daliy }: WeatherInfoProps) {
-  const sliceDaliy = daliy.slice(0, 6);
+  const sliceDaliy = daliy.slice(0, 9);
   return (
     <div className="Background">
       <Container className="Container" maxWidth="sm">

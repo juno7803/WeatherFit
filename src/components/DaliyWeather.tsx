@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from "react";
 import {weatherImgs} from "../models/weatherOptions";
-import './Weather';
+import "./DaliyWeather.css";
 import src from "*.bmp";
 
 type DaliyWeatherProps = {
@@ -18,16 +18,11 @@ function DaliyWeather({time,temp,weather}:DaliyWeatherProps){
     }
     useEffect(getTime,[]);
 
-    const imgStyle={
-        width: "70px",
-        height: "70px"
-    }
-    
     return(
         <div className="daliyInfo">
-            <span>{ctime}시</span>
-            <img className="daliyImgs" src={weatherImgs(weather)} style={imgStyle}/>
-            <span>{Math.ceil(temp)}℃</span>
+            <div className="daliyTemp">{Math.ceil(temp)}℃</div>
+            <div><img className="daliyImgs" src={weatherImgs(weather)}/></div>
+            <div>{ctime}시</div>
         </div>
     );
 }
