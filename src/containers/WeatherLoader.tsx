@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../modules";
 import Weather from "../components/Weather";
+import DaliyWeather from "../components/DaliyWeather";
 import { getWeatherThunk } from "../modules/weather";
 import { weatherOptions, weatherImgs, weatherMsgs } from "../models/weatherOptions";
 import { clothRecommand } from '../models/clothRecommand';
@@ -29,8 +30,9 @@ function WeatherLoader() {
           temp={data.temp}
           cloth={clothRecommand(data.temp).top}
           bottom={clothRecommand(data.temp).bottom}
-          imgs={weatherImgs(data.weather)?.day}
+          imgs={weatherImgs(data.weather)}
           msg={weatherMsgs(data.weather)}
+          daliy={data.daliy}
         />
       )}
     </>

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Container from "@material-ui/core/Container";
 import Switch from "@material-ui/core/Switch";
-import BottomNavigation from "@material-ui/core/BottomNavigation";
-import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import "./Weather.css";
+import DaliyWeather from "./DaliyWeather";
 
 type WeatherInfoProps = {
   weather: string;
@@ -12,28 +11,33 @@ type WeatherInfoProps = {
   bottom: string;
   imgs: string | undefined;
   msg: string | undefined;
-  //daliy: string[];
+  daliy: any;
 };
 
-function Weather({ temp, cloth, bottom, imgs, msg}: WeatherInfoProps) {
-  const [state, setState] = React.useState({
-    checkedA: true,
-    checkedB: true,
-  });
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
-    // 여기서 함수를 호출해서 toggle
-  };
-  
+function Weather({ temp, cloth, bottom, imgs, msg, daliy }: WeatherInfoProps) {
+  const sliceDaliy = daliy.slice(0, 6);
   return (
     <div className="Background">
       <Container className="Container" maxWidth="sm">
         <h1>서울 특별시</h1>
         <h2 className="TempInfo">{Math.ceil(temp)}℃ </h2>
         <div className="WeatherMsg">{msg}</div>
-        <img className="WeatherImgs" src={imgs}/>
-        <div> 시간대별 날씨 현황 </div>
+        <img className="WeatherImgs" src={imgs} />
+        <div className="DaliyWeatherContainer">
+          시간대별 날씨 현황
+          <div className="DaliyWeather">
+            {sliceDaliy.map((it: any, i: number) => {
+              return (
+                <DaliyWeather
+                  time={it.dt}
+                  temp={it.temp}
+                  weather={it.weather[0].main}
+                  key={i}
+                />
+              );
+            })}
+          </div>
+        </div>
         <div className="ClothContainer">
           <div className="Cloth">
             <img src={cloth} />
@@ -42,7 +46,7 @@ function Weather({ temp, cloth, bottom, imgs, msg}: WeatherInfoProps) {
           이런 옷을 추천 드려요
         </div>
         <div className="Footer">
-          <Switch color='primary'></Switch>
+          <Switch color="primary"></Switch>
         </div>
       </Container>
     </div>
@@ -59,5 +63,3 @@ export default Weather;
 // 11~9도 : 트렌치 코트,야상, 기모바지
 // 8~5도 : 울 코트, 히트텍 가죽 옷
 // 4도 이하: 패팅, 두꺼운 코트, 목도리
-
-// 위치정보 받아와서 현재위치 기준으로 하는건 나중에 추가 구현
