@@ -11,3 +11,4 @@
 ---
 - [ ] Redux-thunk 추가
 - [ ] Redux-saga 
+- [ ] Middleware
