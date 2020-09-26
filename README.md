@@ -9,4 +9,3 @@
 `$ yarn add redux react-redux @types/react-redux`
 
 ---
-- [ ] Redux-thunk 추가
